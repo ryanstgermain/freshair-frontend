@@ -1,4 +1,44 @@
-img {
-    width: 100vw;
+body {
+    height: 80vh;
+    width:100vw;
+    background: url('../../assets/snowboarder.jpg') no-repeat;
+    background-position:center center;
+    background-size:cover;
+    display: flex;
+    
 }
 
+.card-body {
+    background-color: #e6e8e6;
+}
+
+.btn {
+    background-color: #f15025;
+    border-color: #000
+}
+
+.login {
+    position: relative;
+    top: 30%;
+    left: 10%; 
+}
+
+.container {
+    height: 30vh;
+    width: 30vw;
+    margin: 0;
+}
+
+.row {
+    height: 100%;
+}
+
+.cardHeight {
+    height: 100%;
+    display: flex;
+}
+
+.cardFlex{
+    display: flex;
+    align-content: space-around;
+}

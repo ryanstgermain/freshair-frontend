@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UserHomepageComponent } from './user-homepage/user-homepage.component';
 import { TripPageComponent } from './trip-page/trip-page.component';
 import { SignupComponent } from './signup/signup.component'
-import { from } from 'rxjs';
+import { NavComponent } from './nav/nav.component';
 
 const routes: Routes = [
   {path: "", component: HomeComponent},

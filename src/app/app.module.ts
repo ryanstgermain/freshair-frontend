@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TripPageComponent } from './trip-page/trip-page.component';
 import { UserHomepageComponent } from './user-homepage/user-homepage.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     TripPageComponent,
     UserHomepageComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

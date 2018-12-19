@@ -10,8 +10,8 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TripPageComponent
-    UserHomepageComponent
+    TripPageComponent,
+    UserHomepageComponent,
     HomeComponent
   ],
   imports: [

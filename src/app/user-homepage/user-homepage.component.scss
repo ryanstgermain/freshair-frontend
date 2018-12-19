@@ -7,8 +7,8 @@
 .status-bar {
     height: 5vw;
     width: 80vw;
-    border: 1px solid black;
-    background-color: grey;
+    border: 1px solid #ced0ce;
+    background-color: #e6e8e6
 }
 
 .header-section {
@@ -16,7 +16,7 @@
     flex-direction: row;
     justify-content: center;
     justify-content: space-evenly;
-    align-items: baseline
+    align-items: center
 }
 
 .mid-section {
@@ -30,17 +30,32 @@
 .about-user {
     height: 20vw;
     width: 15vw;
-    border: 1px solid black;
-    background-color: grey;
+    border: 1px solid #ced0ce;
+    background-color: #e6e8e6;
     margin-left: 15px;
     margin-top: 30px
+}
+
+.about-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 10px
 }
 
 .review-section {
     height: 20vw;
     width: 75vw;
-    border: 1px solid black;
-    background-color: grey;
+    border: 1px solid #ced0ce;
+    background-color: #e6e8e6;
+}
+
+.review-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    margin-right: 10px
 }
 
 .info-section {
@@ -51,32 +66,32 @@
     margin-top: 100px;
 }
 
-.info-buttons {
+.info-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    justify-content: space-between;
-    margin-left: 400px;
-    margin-right: 400px;
-    margin-top: 10px
+    margin-top: 450px
 }
 
 button {
     font-size: 12pt;
     height: 40px;
-    width: 120px
+    width: 120px;
+    background-color: #f15025;
+    &:hover {
+        background-color: #b73e1d
+    }
 }
 
 .vehicle-info {
     height: 30vw;
     width: 40vw;
-    border: 1px solid black;
-    background-color: grey;
+    border: 1px solid #ced0ce;
+    background-color: #e6e8e6;
 }
 
 .trip-info {
     height: 30vw;
     width: 40vw;
-    border: 1px solid black;
-    background-color: grey;
+    border: 1px solid #ced0ce;
+    background-color: #e6e8e6;
 }

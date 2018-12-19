@@ -7,6 +7,7 @@ import { TripPageComponent } from './trip-page/trip-page.component';
 import { UserHomepageComponent } from './user-homepage/user-homepage.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FooterComponent } from './footer/footer.component';
     TripPageComponent,
     UserHomepageComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

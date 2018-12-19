@@ -1,45 +1,58 @@
-<div>
-  <h1>Please select a trip.</h1>
-  <form>
-    <button>Search</button>
-    <button>Create Trip</button>
-  </form>
-  <form>
-    <input type='date' placeholder='Start Date' />
-    <input type='date' placeholder='End Date' />
-    <input type='time' placeholder='Start Time' />
-    <input type='date' placeholder='End Time' />
-    <select name='Locations'>
-      {{locations.map(location =>
-        <option value='{{location.id}}'>{{location.name}}</option>
-      )}}
-    </select>
-  </form>
-  <div>
-    <table>
-      <thead>
-        <tr>
-          <th>Location</th>
-          <th>Start Time</th>
-          <th>End Time</th>
-          <th>Number of Seats Available</th>
-          <th>Seat Price</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        {{trips.map(trip =>
-          <tr class='{{trip.id}}'>
-            <th>{{trip.location.id(FK).location.name}}</th>
-            <th>{{trip.start_time}}</th>
-            <th>{{trip.end_time}}</th>
-            <th>{{trip.seats_available}}</th>
-            <th>{{seat_price}}</th>
-            <th>
-              <button>Book Trip</button>
-            </th>
-          </tr>)}}
-      </tbody>
-    </table>
+<div class="holla">
+    <div class="container">
+      <h1>Please select a trip.</h1>
+      <form>
+        <div class="form-group">
+          <button class="main">Search</button>
+          <button class="main">Create Trip</button>
+        </div>
+        <div class="form-group">
+          <label>Start Date</label>
+          <input type='date' placeholder='Start Date' />
+          <label>End Date</label>
+          <input type='date' placeholder='End Date' />
+        </div>
+        <div class="form-group">
+          <label>Start Time</label>
+          <input type='time' placeholder='Start Time' />
+          <label>End Time</label>
+          <input type='time' placeholder='End Time' />
+        </div>
+        <div class="form-group">
+          <select name='Locations'>
+            <option>Pick a Location</option>
+            {{locations.map(location =>
+              <option value='{{location.id}}'>{{location.name}}</option>
+            )}}
+          </select>
+      </div>
+      </form>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Location</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+              <th>Number of Seats Available</th>
+              <th>Seat Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{trips.map(trip =>
+              <tr class='{{trip.id}}'>
+                <th>{{trip.location.id(FK).location.name}}</th>
+                <th>{{trip.start_time}}</th>
+                <th>{{trip.end_time}}</th>
+                <th>{{trip.seats_available}}</th>
+                <th>{{trip.seat_price}}</th>
+                <th>
+                  <button>Book Trip</button>
+                </th>
+              </tr>)}}
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
-</div>

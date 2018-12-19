@@ -1,0 +1,14 @@
+.profile-pic img {
+    height: 10vw;
+    width: 10vw;
+    margin-top: 10px
+}
+
+.status-bar {
+    display: flex;
+    flex-direction: row;
+    height: 5vw;
+    border: 1px solid black;
+    background-color: grey;
+    opacity: 0.2
+}

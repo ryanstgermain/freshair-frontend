@@ -1,10 +1,10 @@
-<div class="holla" *ngIf="trips">
+<div class="holla">
     <div class="container">
       <h1>Please select a trip.</h1>
       <form [formGroup]="tripForm">
         <div class="form-group">
-          <button class="main btn btn-primary">Search</button>
-          <button class="main btn btn-primary">Create Trip</button>
+          <button class="main">Search</button>
+          <button class="main">Create Trip</button>
         </div>
         <div class="form-group">
           <label>Start Date:</label>
@@ -31,7 +31,7 @@
         <table>
           <thead>
             <tr>
-              <th>Location</th>
+              <th>Resort Name</th>
               <th>Start Time</th>
               <th>End Time</th>
               <th>Number of Seats Available</th>
@@ -40,15 +40,15 @@
             </tr>
           </thead>
           <tbody>
-              <tr class='{{trips.id}}'>
-                <!-- <th>{{trip.location.id(FK).location.name}}</th> -->
-                <th>{{trips.start_time}}</th>
-                <th>{{trips.end_time}}</th>
-                <th>{{trips.seats_available}}</th>
-                <th>{{trips.seat_price}}</th>
-                <th>
+              <tr *ngFor='let trips of this.trips' class='{{trips.id}}'>
+                <td>{{trips.resort_name}}</td>
+                <td>{{trips.start_time}}</td>
+                <td>{{trips.end_time}}</td>
+                <td>{{trips.seats_available}}</td>
+                <td>${{trips.seat_price}}</td>
+                <td>
                   <button>Book Trip</button>
-                </th>
+                </td>
               </tr>
           </tbody>
         </table>

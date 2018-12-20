@@ -6,4 +6,5 @@ export interface TripData {
   start_time: string;
   end_time: string;
   location_id: number;
+  resort_name: string;
 }

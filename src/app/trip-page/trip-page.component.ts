@@ -1,18 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GetrequestserviceService } from '../getrequestservice.service'
-// import { TripData } from './tripdata'
-import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
-
-interface TripData {
-  id: number;
-  date: string;
-  seats_available: number;
-  seat_price: string;
-  start_time: string;
-  end_time: string;
-  location_id: number;
-}
 
 @Component({
   selector: 'app-trip-page',
@@ -21,12 +8,15 @@ interface TripData {
 })
 export class TripPageComponent implements OnInit{
 
+  trips:Object
+
   constructor(private _GetrequestserviceService: GetrequestserviceService) { }
     
   ngOnInit() {
     
     this._GetrequestserviceService.getData().subscribe( info => {
-      console.log(info)
+      this.trips = info
+      console.log(this.trips)
     })
   }
 }

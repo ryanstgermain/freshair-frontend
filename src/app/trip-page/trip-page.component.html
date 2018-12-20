@@ -1,4 +1,4 @@
-<div class="holla">
+<div class="holla" *ngIf="trips">
     <div class="container">
       <h1>Please select a trip.</h1>
       <form>
@@ -40,17 +40,16 @@
             </tr>
           </thead>
           <tbody>
-            <!-- {{trips.map(trip =>
-              <tr class='{{trip.id}}'>
-                <th>{{trip.location.id(FK).location.name}}</th>
-                <th>{{trip.start_time}}</th>
-                <th>{{trip.end_time}}</th>
-                <th>{{trip.seats_available}}</th>
-                <th>{{trip.seat_price}}</th>
+              <tr class='{{trips.id}}'>
+                <!-- <th>{{trip.location.id(FK).location.name}}</th> -->
+                <th>{{trips.start_time}}</th>
+                <th>{{trips.end_time}}</th>
+                <th>{{trips.seats_available}}</th>
+                <th>{{trips.seat_price}}</th>
                 <th>
                   <button>Book Trip</button>
                 </th>
-              </tr>)}} -->
+              </tr>
           </tbody>
         </table>
       </div>

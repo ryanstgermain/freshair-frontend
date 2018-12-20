@@ -4,12 +4,13 @@ footer {
     color: white;
 }
 
-.FAR {
-    display: flex;
-    justify-content: left;
+.stickBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5%;
 }
 
-.muscleCakes {
-    display: flex;
-    justify-content: right;
+.navbar {
+    margin: 0;
 }

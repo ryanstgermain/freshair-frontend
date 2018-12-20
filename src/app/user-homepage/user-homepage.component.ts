@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetrequestserviceService } from '../getrequestservice.service'
 
 @Component({
   selector: 'app-user-homepage',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserHomepageComponent implements OnInit {
 
-  constructor() { }
+  home: Object
+
+  constructor(private _GetrequestserviceService: GetrequestserviceService) { }
 
   ngOnInit() {
+    this._GetrequestserviceService.getHome().subscribe( info => {
+      this.home = info
+      console.log(this.home)
+    })
   }
 
 }

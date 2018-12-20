@@ -21,9 +21,9 @@
         <div class="form-group">
           <select name='Locations'>
             <option>Pick a Location</option>
-            {{locations.map(location =>
+            <!-- {{locations.map(location =>
               <option value='{{location.id}}'>{{location.name}}</option>
-            )}}
+            )}} -->
           </select>
       </div>
       </form>
@@ -40,7 +40,7 @@
             </tr>
           </thead>
           <tbody>
-            {{trips.map(trip =>
+            <!-- {{trips.map(trip =>
               <tr class='{{trip.id}}'>
                 <th>{{trip.location.id(FK).location.name}}</th>
                 <th>{{trip.start_time}}</th>
@@ -50,7 +50,7 @@
                 <th>
                   <button>Book Trip</button>
                 </th>
-              </tr>)}}
+              </tr>)}} -->
           </tbody>
         </table>
       </div>

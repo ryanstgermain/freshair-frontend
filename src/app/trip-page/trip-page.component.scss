@@ -1,5 +1,4 @@
 .holla {
-    background-color: hotpink;
     width: 100vw;
     height: 100vh;
     padding: 0px;
@@ -15,6 +14,8 @@
 
 label {
     padding: 10px;
+    font-family: GeosansLight;
+    font-size: 15px
 }
 
 form, table {
@@ -27,6 +28,9 @@ table {
 
 button {
     background-color: #F15025;
+    &:hover {
+        background-color: #b73e1d;
+    }
 }
 
 .main {
@@ -38,6 +42,8 @@ button {
 th {
     padding: 10px;
     width: 100vw;
+    font-family: GeosansLight;
+    font-size: 17px
 }
 
 h1 {

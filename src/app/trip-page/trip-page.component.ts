@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetrequestserviceService } from '../getrequestservice.service'
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-trip-page',
@@ -7,6 +8,14 @@ import { GetrequestserviceService } from '../getrequestservice.service'
   styleUrls: ['./trip-page.component.scss']
 })
 export class TripPageComponent implements OnInit{
+
+  tripForm = new FormGroup({
+    startDate: new FormControl(''),
+    endDate: new FormControl(''),
+    startTime: new FormControl(''),
+    endTime: new FormControl(''),
+    location: new FormControl('')
+  })
 
   trips:Object
 

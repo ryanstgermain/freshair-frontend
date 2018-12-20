@@ -1,25 +1,25 @@
 <div class="holla">
     <div class="container">
       <h1>Please select a trip.</h1>
-      <form>
+      <form [formGroup]="tripForm">
         <div class="form-group">
           <button class="main">Search</button>
           <button class="main">Create Trip</button>
         </div>
         <div class="form-group">
-          <label>Start Date</label>
-          <input type='date' placeholder='Start Date' />
-          <label>End Date</label>
-          <input type='date' placeholder='End Date' />
+          <label>Start Date:</label>
+          <input formControlName="startDate" type='date' placeholder='Start Date' />
+          <label>End Date:</label>
+          <input formControlName="endDate" type='date' placeholder='End Date' />
         </div>
         <div class="form-group">
-          <label>Start Time</label>
-          <input type='time' placeholder='Start Time' />
-          <label>End Time</label>
-          <input type='time' placeholder='End Time' />
+          <label>Start Time:</label>
+          <input formControlName="startTime" type='time' placeholder='Start Time' />
+          <label>End Time:</label>
+          <input formControlName="endTime" type='time' placeholder='End Time' />
         </div>
         <div class="form-group">
-          <select name='Locations'>
+          <select formControlName="location" name='Locations'>
             <option>Pick a Location</option>
             <!-- {{locations.map(location =>
               <option value='{{location.id}}'>{{location.name}}</option>

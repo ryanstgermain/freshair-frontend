@@ -8,19 +8,15 @@ import { GetrequestserviceService } from '../getrequestservice.service'
 })
 export class TripPageComponent implements OnInit{
 
-  startTime:Object
-  endTime:Object
-  seatAvail:Object
-  seatPrice:Object
+  trips:Object
 
   constructor(private _GetrequestserviceService: GetrequestserviceService) { }
     
   ngOnInit() {
     
     this._GetrequestserviceService.getData().subscribe( info => {
-      this.startTime = info[0].start_time
-      this.endTime = info[0].end_time
-      console.log(this.endTime)
+      this.trips = info
+      console.log(this.trips)
     })
   }
 }

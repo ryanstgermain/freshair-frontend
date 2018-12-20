@@ -1,6 +1,7 @@
 import { TripData } from './trip-page/tripdata'
 import { UserData } from './home/userdata'
 import { SignupData} from './signup/signupdata'
+import { HomeData } from './user-homepage/homedata'
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs'
 import { Injectable } from '@angular/core'
@@ -30,5 +31,9 @@ export class GetrequestserviceService {
       "last_name": form.last_name,
       "age": form.age
     })
+  }
+
+  getHome(): Observable <HomeData[]> {
+    return this.http.get<HomeData[]>('https://freshairide.herokuapp.com/users/home')
   }
 }

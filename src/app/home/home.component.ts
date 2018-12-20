@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-
+import { GetrequestserviceService } from '../getrequestservice.service'
 
 @Component({
   selector: 'app-home',
@@ -14,7 +14,12 @@ export class HomeComponent implements OnInit {
     password: new FormControl(''),
   })
 
-  constructor() { }
+  constructor(private _GetrequestserviceService: GetrequestserviceService) { }
+
+  onSubmit() {
+    console.log(this.loginForm.value)
+    this._GetrequestserviceService.getLogin(this.loginForm.value.user_name, this.loginForm.value.password)
+  }
 
   ngOnInit() {
   }

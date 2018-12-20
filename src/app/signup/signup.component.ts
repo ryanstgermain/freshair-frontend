@@ -10,15 +10,19 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class SignupComponent implements OnInit {
 
   signupForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
+    first_name: new FormControl(''),
+    last_name: new FormControl(''),
     age: new FormControl(''),
-    userName: new FormControl(''),
-    password: new FormControl(''),
-    email: new FormControl('')
+    user_name: new FormControl(''),
+    password: new FormControl('')
   })
 
-  constructor() { }
+  constructor(private _GetrequestserviceService: GetrequestserviceService) { }
+
+  onSubmit(){
+    console.log(this.signupForm.value)
+    this._GetrequestserviceService.signup(this.signupForm.value)
+  }
 
   ngOnInit() {
   }

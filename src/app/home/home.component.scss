@@ -1,10 +1,11 @@
 body {
-    height: 80vh;
+    height: 90vh;
     width:100vw;
     background: url('../../assets/snowboarder.jpg') no-repeat;
     background-position:center center;
     background-size:cover;
     display: flex;
+    overflow: hidden;
     
 }
 

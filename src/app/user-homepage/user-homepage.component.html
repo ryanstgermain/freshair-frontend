@@ -1,16 +1,36 @@
-<div>
+<div *ngIf="home">
     <div class="header-section">
         <div class="profile-pic">
             <img src="https://eadb.org/wp-content/uploads/2015/08/profile-placeholder.jpg" alt="profile pic">
         </div>
-        <div class="status-bar">Status Bar</div>
+        <div class="status-bar">
+            <h1>Upcoming trip: {{home.resort_name}}</h1>
+            <h3>Start Time: {{home.start_time}} End Time: {{home.end_time}}</h3>
+        </div>
     </div>
     <div class="mid-section">
         <div class="about-user about-button">
-            User Info
-            <div class="about-button">
+                <tbody>
+                    <tr>
+                        <th>{{home.first_name}} {{home.last_name}}</th>
+                    </tr>
+                    <tr>
+                        <td>{{home.user_name}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{home.age}}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="about-button">
+                                <button class="btn btn-primary" type="submit">Edit Info</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            <!-- <div class="about-button">
                 <button class="btn btn-primary" type="submit">Edit Info</button>
-            </div>
+            </div> -->
         </div>
         <div class="review-section review-button">
             Review Section
@@ -20,21 +40,77 @@
         </div>
     </div>
     <div class="info-section">
-        <div class="vehicle-info"> 
-            Vehicle Info
-            <div class="info-container">
-                <button class="btn btn-primary" type="submit">Create</button>
-            </div>
+        <div class="vehicle-info">
+            <tbody>
+                <tr>
+                    <th>Vehicle</th>
+                </tr>
+                <tr>
+                    <td>{{home.year}} {{home.make}} {{home.model}}</td>
+                </tr>
+                <tr>
+                    <th>Drivetrain</th>
+                </tr>
+                <tr>
+                    <td>{{home.drivetrain}}</td>
+                </tr>
+                <tr>
+                    <th>Plate Number</th>
+                </tr>
+                <tr>
+                    <td>{{home.plate_number}}</td>
+                </tr>
+                <tr>
+                    <th>Max Number of Seats Available</th>
+                </tr>
+                <tr>
+                    <td>{{home.passenger_available}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="info-container">
+                            <button class="btn btn-primary" type="submit">Create</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
         </div>
         <div class="trip-info">
-            Trip Info
-            <div class="info-container">
-                <button class="btn btn-primary" type="submit">Create</button>
-            </div>
+            <tbody>
+                <tr>
+                    <th>Resort Name</th>
+                    <th>Resort Website</th>
+                </tr>
+                <tr>
+                    <td>{{home.resort_name}}</td>
+                    <td>
+                        <a href="{{home.rental_url}}">Link</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+                <tr>
+                    <td>{{home.start_time}}</td>
+                    <td>{{home.end_time}}</td>
+                </tr>
+                <tr>
+                    <th>Number of Seats Available</th>
+                    <th>Seat Price</th>
+                </tr>
+                <tr>
+                    <td>{{home.passenger_available}}</td>
+                    <td>{{home.seat_price}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="info-container">
+                            <button class="btn btn-primary" type="submit">Create</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
         </div>
     </div>
-    <!--<div class="info-buttons">-->
-        <!--<button class="btn btn-primary" type="submit">Create</button>-->
-        <!--<button class="btn btn-primary" type="submit">Create</button>-->
-    <!--</div>-->
 </div>
